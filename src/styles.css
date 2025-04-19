@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+.correct-answer {
+    animation: correctPulse 0.5s;
+}
+
+.wrong-answer {
+    animation: wrongShake 0.5s;
+}
+
+@keyframes correctPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes wrongShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.progress-bar {
+    transition: width 0.3s ease;
+}
