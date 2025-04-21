@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumSolve</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="module" crossorigin src="/NumSolve/assets/index-T0Fui5Ik.js"></script>
+  <link rel="stylesheet" crossorigin href="/NumSolve/assets/index-zcSLOCah.css">
+</head>
+<body class="bg-gray-100" style="background-color: var(--light-gray);">
+    <div class="container mx-auto px-4 py-8 max-w-md">
+        <header class="text-center mb-6">
+            <h1 class="text-4xl font-bold mb-2" style="color: var(--color-9);">NumSolve</h1>
+        </header>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <div class="text-lg font-bold" style="color: var(--color-1);">
+                    Score: <span id="score">0</span>
+                </div>
+                <div  class="inline-block rounded-md px-4 py-1 text-lg font-bold text-white">
+                    <h2 class="text-black">Stage <span id="current-stage">1</span> / 10</h2>
+                </div>
+                <div class="text-lg font-bold" style="color: var(--color-6);">
+                    Streak: <span id="streak">0</span>
+                    <i class="fas fa-fire ml-1" style="color: var(--color-2);"></i>
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-gray-600 font-medium">Time Remaining:</span>
+                    <span id="time-display" class="font-bold" style="color: var(--color-9);">30s</span>
+                </div>
+                <div class="h-2 bg-gray-200 rounded-full">
+                    <div id="timer-bar" class="h-full rounded-full transition-all duration-1000" style="background-color: var(--color-9); width: 100%"></div>
+                </div>
+            </div>
+            
+            <div id="question-container" class="h-25 text-center mb-6 p-4 rounded-lg" style="background-color: var(--light-gray);">
+                <div id="question" class="text-3xl font-bold mb-2" style="color: var(--black);">Loading question...</div>
+                <div id="feedback" class="h-6 text-lg" style="color: var(--color-2);"></div>
+            </div>
+            
+            <div class="flex justify-center mb-6">
+                <input type="number" id="answer" placeholder="Your answer" 
+                    class="w-40 px-4 py-2 border rounded-md text-center text-xl focus:outline-none" 
+                    style="border-color: var(--color-7); color: var(--black);">
+            </div>
+            
+            <div class="flex justify-center space-x-4">
+                <button id="submit-btn" class="text-white font-bold py-2 px-4 rounded-md" 
+                    style="background-color: var(--color-9);">
+                    Submit
+                </button>
+                <button id="new-btn" class="text-white font-bold py-2 px-4 rounded-md" 
+                    style="background-color: var(--color-7);">
+                    New Question
+                </button>
+            </div>
+        </div>
+        
+        <div id="stats" class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-bold mb-4 text-center" style="color: var(--color-8);">Your Stats</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-3 rounded-md text-white" style="background-color: var(--color-1);">
+                    <div class="text-sm">Questions Attempted</div>
+                    <div id="attempted" class="text-2xl font-bold">0</div>
+                </div>
+                <div class="p-3 rounded-md text-white" style="background-color: var(--color-3);">
+                    <div class="text-sm">Correct Answers</div>
+                    <div id="correct" class="text-2xl font-bold">0</div>
+                </div>
+                <div class="p-3 rounded-md text-white" style="background-color: var(--color-6);">
+                    <div class="text-sm">Accuracy</div>
+                    <div id="accuracy" class="text-2xl font-bold">0%</div>
+                </div>
+                <div class="p-3 rounded-md text-white" style="background-color: var(--color-9);">
+                    <div class="text-sm">Highest Streak</div>
+                    <div id="highest-streak" class="text-2xl font-bold">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
