@@ -1100,7 +1100,7 @@ function handleTimeUp() {
     questionElement.textContent = `Game Over! Final Score: ${score} (Stage ${currentStage})`;
 
     const stageImage = document.getElementById('stage-image');
-    stageImage.src = `src/images/stage ${currentStage}.gif`;
+    stageImage.src = `images/stage ${currentStage}.gif`;
     stageImage.alt = `Stage ${currentStage} Completion`;
 
     stageImage.className = 'min-w-[250px] max-w-[250px] max-h-[250px] rounded-lg shadow-md mt-5';
