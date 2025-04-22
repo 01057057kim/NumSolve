@@ -75,13 +75,112 @@
     transition: width 0.5s ease;
 }
 
-@keyframes shake {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem; 
+    }
+
+    #question {
+        font-size: 1.5rem; 
+    }
+
+    .text-4xl {
+        font-size: 2rem;
+    }
+
+    .text-3xl {
+        font-size: 1.5rem;
+    }
+
+    .text-2xl {
+        font-size: 1.25rem;
+    }
+
+    .text-xl {
+        font-size: 1.125rem;
+    }
+
+    .text-lg {
+        font-size: 1rem;
+    }
+
+    .p-6 {
+        padding: 1rem;
+    }
+
+    .mb-6 {
+        margin-bottom: 1rem;
+    }
+
+    .game-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-controls input {
+        margin-bottom: 0.75rem;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .flex.justify-between {
+        flex-wrap: wrap;
+    }
+
+    .flex.justify-center.space-x-4 {
+        width: 100%;
+    }
+
+    .flex.justify-center.space-x-4 button {
+        flex: 1;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    #stage-image {
+        min-width: 200px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .grid.grid-cols-2 {
+        grid-template-columns: 1fr; 
+    }
+
+    @media (min-width: 400px) {
+        .grid.grid-cols-2 {
+            grid-template-columns: 1fr 1fr; 
+        }
+    }
+
+    .grid.grid-cols-2 .p-3 {
+        padding: 0.75rem;
+    }
+
+    .grid.grid-cols-2 .text-2xl {
+        font-size: 1.25rem;
+    }
+}
+
+@keyframes shake {
     0%,
     100% {
         transform: translateX(0);
     }
-
     10%,
     30%,
     50%,
@@ -89,7 +188,6 @@
     90% {
         transform: translateX(-5px);
     }
-
     20%,
     40%,
     60%,
@@ -111,27 +209,22 @@
     0% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.05);
     }
-
     100% {
         transform: scale(1);
     }
 }
 
 @keyframes wrongShake {
-
     0%,
     100% {
         transform: translateX(0);
     }
-
     25% {
         transform: translateX(-5px);
     }
-
     75% {
         transform: translateX(5px);
     }
@@ -142,12 +235,10 @@
         transform: translateY(0);
         opacity: 0;
     }
-
     50% {
         transform: translateY(-20px);
         opacity: 1;
     }
-
     100% {
         transform: translateY(-40px);
         opacity: 0;
@@ -158,12 +249,10 @@
     0% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.1);
         color: #10B981;
     }
-
     100% {
         transform: scale(1);
     }
@@ -173,19 +262,15 @@
     0% {
         transform: translateX(0);
     }
-
     25% {
         transform: translateX(-5px);
     }
-
     50% {
         transform: translateX(5px);
     }
-
     75% {
         transform: translateX(-5px);
     }
-
     100% {
         transform: translateX(0);
     }
